@@ -25,7 +25,7 @@ snap install maas
 hash -r
 ```
 
-Go to http://maas.local:5240/MAAS to do initial GUI stuff. Note in the admin section of the GUI what the API key for the MAAS consumer is. Copy to clipboard.
+Go to http://maas.home.arpa:5240/MAAS to do initial GUI stuff. Note in the admin section of the GUI what the API key for the MAAS consumer is. Copy to clipboard.
 
 Upload your SSH public key to MAAS so you can access things using this key later.
 
@@ -33,7 +33,7 @@ Upload your SSH public key to MAAS so you can access things using this key later
 Enter the copied API key when asked by the command line below.
 
 ```bash
-maas login admin http://maas.local:5240/MAAS/
+maas login admin http://maas.home.arpa:5240/MAAS/
 ```
 
 ## Create Rocky 9 image
@@ -102,7 +102,7 @@ If you're not already logged in, enter the admin key (from the MAAS GUI Admin=>A
 
 ```bash
 cd /home
-maas login admin http://maas.local:5240/MAAS/
+maas login admin http://maas.home.arpa:5240/MAAS/
 maas admin boot-resources create name='custom/Rocky9' title='Rocky 9 Custom' architecture='amd64/generic' filetype='tgz' base_image='rhel/9' content@=rocky9.tar.gz
 ```
 
